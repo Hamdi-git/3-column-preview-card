@@ -1,0 +1,127 @@
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+}
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    height: 100vh;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+.card{
+    width: 55%;
+    height:60vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border-radius: 5px;
+    color: hsla(0, 0%, 100%, 0.75);
+    
+}
+.card_section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: 50px 30px;
+    background-position: 2rem 2rem;
+    padding: 2rem 2rem 1rem;
+    padding-top: 4rem;
+    text-align: left;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+.sendans{
+    background-color: var(--bright-orange);
+    background-image: url("../images/icon-sedans.svg");
+    border-radius: 5px 0 0 5px;
+}
+.suvs{
+    background-color: var(--dark-cyan);
+    background-image: url("../images/icon-suvs.svg");
+}
+.luxury{
+    background-color: var(--very-dark-cyan);
+    background-image: url("../images/icon-luxury.svg");
+    border-radius: 0 5px 5px 0;
+}
+h1{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Big Shoulders';
+}
+p{
+    line-height: 1.8;
+    font-family: Lexend Deca;
+    font-size: .75rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.btn{
+    text-decoration: none;
+    display: block;
+    padding: 12px 27px;
+    align-self: flex-start;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 3rem;
+    font-family: Lexend Deca;
+    border: none;
+}
+.button_sendans{
+    color: var(--bright-orange);
+}
+
+.button_suvs{
+    color: var(--dark-cyan);
+}
+
+.button_luxury{
+    color: var(--very-dark-cyan);
+}
+.btn:hover{
+    background-color: transparent;
+    color: white;
+    border: 2px solid hsl(0, 0%, 95%);
+    padding: 10px 25px;
+}
+footer {
+    position: absolute;
+    bottom: 110px;
+}
+
+@media(max-width:727px){
+
+
+    .card_section{
+        padding-bottom: 30px;
+    }
+
+    .sendans{
+        border-radius: 5px 5px 0 0;
+    }
+
+    .luxury{
+        border-radius: 0 0 5px 5px;
+    }
+
+    .btn{
+        margin-top: 1rem;
+    }
+
+    footer {
+       bottom: 20px;
+       margin-bottom: -280px;
+    }
+}
